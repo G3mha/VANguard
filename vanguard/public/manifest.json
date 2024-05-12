@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "VANguard",
+  "version": "1.0",
+  "description": "Enhance your web security and privacy.",
+  "permissions": [
+    "tabs", "storage", "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["contentScript.js"]
+  }],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    }
+  }
+}
