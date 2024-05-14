@@ -1,17 +1,24 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
-  output: 'export',
- 
-  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
-  // trailingSlash: true,
- 
-  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
-  // skipTrailingSlashRedirect: true,
- 
-  // Optional: Change the output directory `out` -> `dist`
-  // distDir: 'dist',
-}
- 
-module.exports = nextConfig
+// next.config.js
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: `
+              default-src 'self';
+              script-src 'self' 'wasm-unsafe-eval';
+              style-src 'self' 'unsafe-inline';
+              img-src 'self' data:;
+              connect-src 'self';
+              font-src 'self';
+              object-src 'none';
+            `.replace(/\n/g, ''),
+          },
+        ],
+      },
+    ];
+  },
+};

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "VANguard Dashboard",
+  "version": "1.0",
+  "description": "Enhance your web security and privacy.",
+  "icons": {
+    "256": "icons/icon-256.ico"
+  },
+  "browser_action": {
+    "default_popup": "src/index.html",
+    "default_icon": {
+      "256": "icons/icon-256.ico"
+    },
+    "default_title": "VANguard Dashboard"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["src/css/styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "src/**",
+    "icons/icon-256.ico"
+  ]
+}
