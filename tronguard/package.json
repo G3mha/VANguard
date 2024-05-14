@@ -1,0 +1,32 @@
+{
+  "name": "tro-nguard",
+  "displayName": "tro nguard",
+  "version": "0.0.1",
+  "description": "Enhance your web security and privacy.",
+  "author": "Enricco Gemha <enriccogemha@gmail.com>",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "dev:firefox": "plasmo dev --target=firefox-mv2"
+  },
+  "dependencies": {
+    "plasmo": "0.86.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ]
+  }
+}

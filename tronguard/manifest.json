@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "TRONguard Dashboard",
+  "version": "1.0",
+  "description": "Enhance your web security and privacy.",
+  "icons": {
+    "256": "assets/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "256": "assets/icon.png"
+    },
+    "default_title": "TRONguard Dashboard"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": [
+    "assets/icon.png",
+    "popup.html",
+    "content.js",
+    "styles.css"
+  ]
+}
