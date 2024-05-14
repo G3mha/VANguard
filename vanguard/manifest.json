@@ -7,15 +7,28 @@
     "tabs",
     "storage",
     "<all_urls>",
-    "file:///out/*"
+    "webRequest",
+    "webRequestBlocking"
   ],
   "background": {
     "scripts": ["out/background.js"]
   },
   "browser_action": {
     "default_popup": "out/index.html",
+    "default_title": "VANguard",
     "default_icon": {
-      "256": "public/favicon.ico"
+      "256": "out/favicon.ico"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["out/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "out/*.html",
+    "out/*.css",
+    "out/*.js"
+  ]
 }
