@@ -1,8 +1,7 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { calculateSafetyGrade } from "../public/safetyGradeCalculator.js";
+import { calculateSafetyGrade } from "./safetyGradeCalculator.js";
 
 export default function Home() {
   const [safetyGrade, setSafetyGrade] = useState<string>('');
