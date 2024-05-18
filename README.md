@@ -3,6 +3,10 @@
 **Author**: Enricco Gemha  
 **Release Date**: 04/19/2024
 
+## How to run the project
+
+Navigate to the `build/firefox-mv2-prod` folder, where you will find a `manifest.json` file. In Firefox, go to the search bar and type `about:debugging#/runtime/this-firefox`. Over there you will see a button `Load temporary extension`, click on it, and select the aforementioned `manifest.json`. The extension is now loaded and you can access it via the extension bar.
+
 ## Overview
 
 VANguard is a powerful Firefox extension designed to enhance user privacy and security during web browsing. It provides real-time insights into potentially harmful activities and privacy breaches. By monitoring and displaying various web activities, VANguard aims to empower users with the knowledge and tools to protect their online presence.
@@ -15,7 +19,7 @@ VANguard is a powerful Firefox extension designed to enhance user privacy and se
 
 - **Local Storage Detection**: Detects and reports HTML5 local storage use on the client's device, offering insights into data persistence.
 
-- **Browser Hijacking Detection**: Monitors potential threats of browser hijacking and hooks, alerting users to unauthorized modifications.
+- **Browser Hijacking Protection**: Monitors potential threats of browser hijacking and hooks, alerting users to unauthorized modifications.
 
 - **Canvas Fingerprint Detection**: Detects the use of Canvas fingerprinting techniques used by websites to track users uniquely.
 
