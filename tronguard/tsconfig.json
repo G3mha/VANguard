@@ -7,7 +7,7 @@
     ".plasmo/index.d.ts",
     "./**/*.ts",
     "./**/*.tsx"
-  ],
+, "components/ParentComponent.tsx"  ],
   "compilerOptions": {
     "paths": {
       "~*": [

@@ -2,6 +2,8 @@
   "manifest_version": 2,
   "name": "TRONguard Dashboard",
   "version": "1.0",
+  "author": "Enricco Gemha",
+  "license": "AGPL-3.0",
   "description": "Enhance your web security and privacy.",
   "icons": {
     "256": "assets/icon.png"
@@ -14,27 +16,20 @@
     "default_title": "TRONguard Dashboard"
   },
   "permissions": [
-    "tabs",
-    "storage",
-    "<all_urls>",
     "webRequest",
-    "webRequestBlocking"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["styles.css"],
-      "js": ["content.js"]
-    }
+    "webRequestBlocking",
+    "cookies",
+    "storage",
+    "<all_urls>"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": true
+    "scripts": ["background.js"]
   },
   "web_accessible_resources": [
     "assets/icon.png",
     "popup.html",
+    "popup.js",
     "content.js",
-    "styles.css"
+    "styles/globals.css"
   ]
 }

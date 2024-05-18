@@ -15,7 +15,7 @@ VANguard is a powerful Firefox extension designed to enhance user privacy and se
 
 - **Local Storage Detection**: Detects and reports HTML5 local storage use on the client's device, offering insights into data persistence.
 
-- **Browser Hijacking Protection**: Monitors potential threats of browser hijacking and hooks, alerting users to unauthorized modifications.
+- **Browser Hijacking Detection**: Monitors potential threats of browser hijacking and hooks, alerting users to unauthorized modifications.
 
 - **Canvas Fingerprint Detection**: Detects the use of Canvas fingerprinting techniques used by websites to track users uniquely.
 
