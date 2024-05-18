@@ -1,33 +1,46 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# VANguard: Firefox Web Security Extension
 
-## Getting Started
+**Author**: Enricco Gemha  
+**Release Date**: 04/19/2024
 
-First, run the development server:
+## How to run the project
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+Navigate to the `build/firefox-mv2-prod` folder, where you will find a `manifest.json` file. In Firefox, go to the search bar and type `about:debugging#/runtime/this-firefox`. Over there you will see a button `Load temporary extension`, click on it, and select the aforementioned `manifest.json`. The extension is now loaded and you can access it via the extension bar.
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+## Overview
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+VANguard is a powerful Firefox extension designed to enhance user privacy and security during web browsing. It provides real-time insights into potentially harmful activities and privacy breaches. By monitoring and displaying various web activities, VANguard aims to empower users with the knowledge and tools to protect their online presence.
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+## Features
 
-## Making production build
+- **Domain Monitoring**: Tracks and displays all connections to third-party domains to help users see where their data might be going.
 
-Run the following:
+- **Cookie Management**: Identifies and categorizes cookies injected during page loading, differentiating between first-party and third-party cookies, as well as session versus persistent cookies.
 
-```bash
-pnpm build
-# or
-npm run build
-```
+- **Local Storage Detection**: Detects and reports HTML5 local storage use on the client's device, offering insights into data persistence.
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+- **Browser Hijacking Protection**: Monitors potential threats of browser hijacking and hooks, alerting users to unauthorized modifications.
 
-## Submit to the webstores
+- **Canvas Fingerprint Detection**: Detects the use of Canvas fingerprinting techniques used by websites to track users uniquely.
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+- **Privacy Scoring**: Implements a scoring system that evaluates how well a webpage respects user privacy based on predefined criteria.
+
+## Objective
+
+Our goal is to create an indispensable tool for everyday web users and privacy enthusiasts. VANguard alerts users to intrusive behaviors and potential security threats, fostering a safer browsing experience.
+
+## Installation
+
+Detailed instructions on how to install and configure VANguard will be provided here.
+
+## Contributing
+
+We welcome contributions from the community! Please read our contributing guidelines for information on how to submit pull requests, report bugs, or suggest new features.
+
+## License
+
+This project is licensed under *Affero GNU Public License* - see the LICENSE file for details.
+
+## Acknowledgements
+
+Thanks to Rodolfo Avelino and Joao Vieira, that proposed this project during the course of Hacker Technologies at Insper Learning Institution.
