@@ -1,7 +1,8 @@
-# VANguard: Firefox Web Security Extension
+# VANguard - Firefox Web Security Extension
+
+🇧🇷 Version in Portuguese: [click here](./README-pt_BR.md)
 
 **Author**: Enricco Gemha  
-**Release Date**: 04/19/2024
 
 ## How to run the project
 
